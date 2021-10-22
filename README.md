@@ -29,7 +29,8 @@ HQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUVLB7rUW44kB/
 bmF0774BxL4YSFlhgjICICadVGNA3jdgUM/I2O2dgq43mLyjj0xMqTQrbO/7lZsm
 -----END CERTIFICATE-----
 ```
-* Transforming command: ```python strbind.py --from=s3_cer_base64.cer --to=cert.h --def=CERTIFICATE_ROOT_CA```
+* Transforming command: 
+```python strbind.py --from=s3_cer_base64.cer --to=cert.h --def=CERTIFICATE_ROOT_CA```
 
 * Target cert.h file:
 ```cpp
@@ -57,7 +58,8 @@ Proin finibus tellus quam, suscipit molestie orci condimentum ac. Nullam et sem 
 Maecenas nibh lectus, vehicula ut mollis ut, scelerisque eu felis. Nunc non cursus quam, et
 ```
 
-* Transforming command: ```python strbind.py --from=s3_cer_base64.cer --to=poem.h --arr=lorem_ipsum --end=crlf```
+* Transforming command: 
+```python strbind.py --from=s3_cer_base64.cer --to=poem.h --arr=lorem_ipsum --end=crlf```
 
 * Target poem.h file:
 ```cpp
