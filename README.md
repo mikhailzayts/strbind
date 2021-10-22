@@ -9,13 +9,13 @@ Transform your text with
 List of possible arguments:
 * **--from** - File with original content
 * **--to** - Target file. Text will be written in the original file, when **--to** argument are not used
-* **--arr** - To add ```const char``` array syntax. The argument value is array name
+* **--arr** - To add **const char** array syntax. The argument value is array name
 * **--def** - To add preprocessor definition syntax. The argument value is definition name
-* **--end** - String end ('LF'/'lf' or 'CRLF'/'crlf'). 'LF' by default
+* **--end** - String end (**LF**/**lf** or **CRLF**/**crlf**). **LF** by default
 
 ## Examples
 ### Certificate definition
-* Existing cert.pem file:
+1. Existing cert.pem file:
 ```txt
 -----BEGIN CERTIFICATE-----
 MIIB3DCCAYOgAwIBAgINAgPlfvU/k/2lCSGypjAKBggqhkjOPQQDAjBQMSQwIgYD
@@ -30,10 +30,10 @@ HQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUVLB7rUW44kB/
 bmF0774BxL4YSFlhgjICICadVGNA3jdgUM/I2O2dgq43mLyjj0xMqTQrbO/7lZsm
 -----END CERTIFICATE-----
 ```
-* Transforming command: 
-```python strbind.py --from=s3_cer_base64.cer --to=cert.h --def=CERTIFICATE_ROOT_CA```
+2. Transforming command: 
+```python strbind.py --from=cert.pem --to=cert.h --def=CERTIFICATE_ROOT_CA```
 
-* Target cert.h file:
+3. Target cert.h file:
 ```cpp
 #define CERTIFICATE_ROOT_CA \
     "-----BEGIN CERTIFICATE-----\n" \
@@ -50,7 +50,7 @@ bmF0774BxL4YSFlhgjICICadVGNA3jdgUM/I2O2dgq43mLyjj0xMqTQrbO/7lZsm
     "-----END CERTIFICATE-----\n"
 ```
 ### Text array
-* Existing lorem.txt file:
+1. Existing lorem.txt file:
 ```txt
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam non sapien a rhoncus.
 Curabitur hendrerit neque et sapien eleifend, vitae rutrum enim lacinia.
@@ -59,10 +59,10 @@ Proin finibus tellus quam, suscipit molestie orci condimentum ac. Nullam et sem 
 Maecenas nibh lectus, vehicula ut mollis ut, scelerisque eu felis. Nunc non cursus quam, et
 ```
 
-* Transforming command: 
-```python strbind.py --from=s3_cer_base64.cer --to=poem.h --arr=lorem_ipsum --end=crlf```
+2. Transforming command: 
+```python strbind.py --from=lorem.txt --to=poem.h --arr=lorem_ipsum --end=crlf```
 
-* Target poem.h file:
+3. Target poem.h file:
 ```cpp
 const char lorem_ipsum[435] = 
 {
