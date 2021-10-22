@@ -50,23 +50,23 @@ bmF0774BxL4YSFlhgjICICadVGNA3jdgUM/I2O2dgq43mLyjj0xMqTQrbO/7lZsm
 ### Text array
 * Existing lorem.txt file:
 ```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam non sapien a rhoncus. 
-Curabitur hendrerit neque et sapien eleifend, vitae rutrum enim lacinia. 
-Aliquam non dui eget metus auctor porta. Ut volutpat dolor vitae rhoncus tristique. 
-Proin finibus tellus quam, suscipit molestie orci condimentum ac. Nullam et sem justo. 
-Maecenas nibh lectus, vehicula ut mollis ut, scelerisque eu felis. Nunc non cursus quam, et.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam non sapien a rhoncus.
+Curabitur hendrerit neque et sapien eleifend, vitae rutrum enim lacinia.
+Aliquam non dui eget metus auctor porta. Ut volutpat dolor vitae rhoncus tristique.
+Proin finibus tellus quam, suscipit molestie orci condimentum ac. Nullam et sem justo.
+Maecenas nibh lectus, vehicula ut mollis ut, scelerisque eu felis. Nunc non cursus quam, et
 ```
 
 * Transforming command: ```python strbind.py --from=s3_cer_base64.cer --to=poem.h --arr=lorem_ipsum --end=crlf```
 
 * Target poem.h file:
 ```
-const char lorem_ipsum[439] = 
+const char lorem_ipsum[435] = 
 {
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam non sapien a rhoncus. \r\n"
-    "Curabitur hendrerit neque et sapien eleifend, vitae rutrum enim lacinia. \r\n"
-    "Aliquam non dui eget metus auctor porta. Ut volutpat dolor vitae rhoncus tristique. \r\n"
-    "Proin finibus tellus quam, suscipit molestie orci condimentum ac. Nullam et sem justo. \r\n"
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam non sapien a rhoncus.\r\n"
+    "Curabitur hendrerit neque et sapien eleifend, vitae rutrum enim lacinia.\r\n"
+    "Aliquam non dui eget metus auctor porta. Ut volutpat dolor vitae rhoncus tristique.\r\n"
+    "Proin finibus tellus quam, suscipit molestie orci condimentum ac. Nullam et sem justo.\r\n"
     "Maecenas nibh lectus, vehicula ut mollis ut, scelerisque eu felis. Nunc non cursus quam, et.\r\n"
 };
 ```
