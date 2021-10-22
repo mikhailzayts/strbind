@@ -15,7 +15,7 @@ List of possible arguments:
 ## Examples
 ### Certificate definition
 * Existing cert.pem file:
-``` 
+```txt
 -----BEGIN CERTIFICATE-----
 MIIB3DCCAYOgAwIBAgINAgPlfvU/k/2lCSGypjAKBggqhkjOPQQDAjBQMSQwIgYD
 VQQLExtHbG9iYWxTaWduIEVDQyBSb290IENBIC0gUjQxEzARBgNVBAoTCkdsb2Jh
@@ -32,7 +32,7 @@ bmF0774BxL4YSFlhgjICICadVGNA3jdgUM/I2O2dgq43mLyjj0xMqTQrbO/7lZsm
 * Transforming command: ```python strbind.py --from=s3_cer_base64.cer --to=cert.h --def=CERTIFICATE_ROOT_CA```
 
 * Target cert.h file:
-```
+```cpp
 #define CERTIFICATE_ROOT_CA \
     "-----BEGIN CERTIFICATE-----\n" \
     "MIIB3DCCAYOgAwIBAgINAgPlfvU/k/2lCSGypjAKBggqhkjOPQQDAjBQMSQwIgYD\n" \
@@ -49,7 +49,7 @@ bmF0774BxL4YSFlhgjICICadVGNA3jdgUM/I2O2dgq43mLyjj0xMqTQrbO/7lZsm
 ```
 ### Text array
 * Existing lorem.txt file:
-```
+```txt
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam non sapien a rhoncus.
 Curabitur hendrerit neque et sapien eleifend, vitae rutrum enim lacinia.
 Aliquam non dui eget metus auctor porta. Ut volutpat dolor vitae rhoncus tristique.
@@ -60,7 +60,7 @@ Maecenas nibh lectus, vehicula ut mollis ut, scelerisque eu felis. Nunc non curs
 * Transforming command: ```python strbind.py --from=s3_cer_base64.cer --to=poem.h --arr=lorem_ipsum --end=crlf```
 
 * Target poem.h file:
-```
+```cpp
 const char lorem_ipsum[435] = 
 {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam non sapien a rhoncus.\r\n"
