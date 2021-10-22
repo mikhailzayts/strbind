@@ -4,7 +4,6 @@ strbind - lapidary text converter for translate an text file to the C-style stri
 ## Usage
 
 Transform your text with 
-
 ```python strbind.py --from=<Original file> --to=<Target file>```
 
 List of possible arguments:
@@ -32,7 +31,6 @@ bmF0774BxL4YSFlhgjICICadVGNA3jdgUM/I2O2dgq43mLyjj0xMqTQrbO/7lZsm
 -----END CERTIFICATE-----
 ```
 * Transforming command: 
-
 ```python strbind.py --from=s3_cer_base64.cer --to=cert.h --def=CERTIFICATE_ROOT_CA```
 
 * Target cert.h file:
@@ -62,7 +60,6 @@ Maecenas nibh lectus, vehicula ut mollis ut, scelerisque eu felis. Nunc non curs
 ```
 
 * Transforming command: 
-
 ```python strbind.py --from=s3_cer_base64.cer --to=poem.h --arr=lorem_ipsum --end=crlf```
 
 * Target poem.h file:
